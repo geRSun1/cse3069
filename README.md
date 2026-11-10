@@ -32,6 +32,7 @@ Họ tên: Nguyễn Phúc Minh Đức · MSSV: 24110213 · Nhóm: 12
 Khi thực hiện ngắt nguồn, rút dây tín hiệu `DATA` (GPIO 14) và cấp nguồn chạy lại chương trình, giao tiếp 1-Wire bị gián đoạn. Lúc này, hàm `dht.readTemperature()` và `dht.readHumidity()` của thư viện Adafruit không nhận được xung phản hồi từ cảm biến sau thời gian chờ (timeout) và trả về giá trị **`NaN` (Not a Number)**. 
 
 Chương trình sử dụng hàm `isnan()` để kiểm tra: nếu phát hiện `NaN`, hệ thống sẽ giữ nguyên trạng thái lỗi (`NaN`), đánh dấu cờ `valid = 0` và **tuyệt đối không gán bằng `0`** để tránh nhầm lẫn với mức nhiệt độ $0^\circ\text{C}$ thực tế ngoài môi trường. Ngoài ra, nếu nối sai nguồn hoặc xử lý vòng lặp chờ bất hợp lệ quá lâu trên vi điều khiển, Watchdog Timer (WDT) của ESP32 sẽ phát hiện CPU bị treo và tự động khởi động lại (reset) mạch.
+<img width="1213" height="453" alt="image" src="https://github.com/user-attachments/assets/28ec47ac-22cd-45e0-954b-46cabd645e55" />
 
 
 ---
