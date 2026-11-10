@@ -49,7 +49,7 @@ khi rút dây data  khi đang chạy firmware
 <img width="883" height="743" alt="image" src="https://github.com/user-attachments/assets/0333a9cf-2f03-40f5-9c54-96b08ff7f3c8" />
 
 
-Trong phần trước mình đã chọn bộ lọc Trung bình trượt (Moving Average - MA) với cửa sổ 5 mẫu (MA5)
+ Chọn bộ lọc Trung bình trượt (Moving Average - MA) với cửa sổ 5 mẫu (MA5)
 - Nhược điểm : độ trễ giả sử khi tăng đột ngột từ 29 lên 32 độ C thì MA5 sẽ tăng lên từ từ
 - Ưu điểm : dễ dàng tiếp cận, sơ đồ mượt
 
