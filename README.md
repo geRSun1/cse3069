@@ -35,6 +35,14 @@ Chương trình sử dụng hàm `isnan()` để kiểm tra: nếu phát hiện 
 <img width="1213" height="453" alt="image" src="https://github.com/user-attachments/assets/28ec47ac-22cd-45e0-954b-46cabd645e55" />
 
 
+Khi rút dây nguồn khi đang chạy firmware
+
+
+<img width="435" height="116" alt="image" src="https://github.com/user-attachments/assets/c3882023-87bb-4d5c-96d0-0d54c4906f74" />
+
+
+khi rút dây data  khi đang chạy firmware
+
 ---
 
 ## 4.3 Bộ lọc đã chọn
