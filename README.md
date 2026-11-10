@@ -33,16 +33,13 @@ Khi thực hiện ngắt nguồn, rút dây tín hiệu `DATA` (GPIO 14) và c�
 
 Chương trình sử dụng hàm `isnan()` để kiểm tra: nếu phát hiện `NaN`, hệ thống sẽ giữ nguyên trạng thái lỗi (`NaN`), đánh dấu cờ `valid = 0` và **tuyệt đối không gán bằng `0`** để tránh nhầm lẫn với mức nhiệt độ $0^\circ\text{C}$ thực tế ngoài môi trường. Ngoài ra, nếu nối sai nguồn hoặc xử lý vòng lặp chờ bất hợp lệ quá lâu trên vi điều khiển, Watchdog Timer (WDT) của ESP32 sẽ phát hiện CPU bị treo và tự động khởi động lại (reset) mạch.
 
-**Dòng log thực tế trích xuất từ Serial Monitor khi rút dây DATA:**
-```text
-timestamp,raw_temp,converted_temp,unit,valid
-12004,NaN,NaN,C,0
+
 ---
 
 ## 4.3 Bộ lọc đã chọn
 Trong phần trước mình đã chọn bộ lọc Trung bình trượt (Moving Average - MA) với cửa sổ 5 mẫu (MA5)
-Nhược điểm : độ trễ giả sử khi tăng đột ngột từ 29 lên 32 độ C thì MA5 sẽ tăng lên từ từ
-Ưu điểm : dễ dàng tiếp cận, sơ đồ mượt
+- Nhược điểm : độ trễ giả sử khi tăng đột ngột từ 29 lên 32 độ C thì MA5 sẽ tăng lên từ từ
+- Ưu điểm : dễ dàng tiếp cận, sơ đồ mượt
 
 ---
 
